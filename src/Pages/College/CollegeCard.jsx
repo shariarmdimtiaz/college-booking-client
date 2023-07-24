@@ -31,7 +31,7 @@ const CollegeCard = ({college}) => {
                     </p>
                     <div className="card-actions justify-end">
                         <Link to={`/details/${college._id}`}>
-                            <button className="btn btn-primary bg-red-700">Details</button>
+                            <button className="btn btn-primary border-0 bg-red-600 hover:bg-red-800">Details</button>
                         </Link>
                     </div>
                 </div>

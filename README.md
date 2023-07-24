@@ -16,7 +16,7 @@ For students, the platform provides a college information. Students can explore 
 
 ## Live Link (Data)
 
-- For all data => college-booking-server-azure.vercel.app
+- For all data => https://college-booking-server-azure.vercel.app
 
 ## React Router Dom v6.4
 
