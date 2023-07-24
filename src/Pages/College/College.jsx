@@ -3,10 +3,13 @@ import useCollege from "../../Hooks/useCollege";
 import { ThemeContext } from "../../Providers/ThemeProvider";
 import CollegeCard from "./CollegeCard";
 import { Helmet } from "react-helmet";
+import { SearchContext } from "../../Providers/SearchProvider";
 
 const College = () => {
     const { containerStyles } = useContext(ThemeContext);
     const [CollegeInfo, refetch, dataLoading] = useCollege();
+    
+
     return (
         <div style={containerStyles}>
             <Helmet>

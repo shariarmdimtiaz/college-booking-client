@@ -78,41 +78,6 @@ const router = createBrowserRouter([
         path: "signup",
         element: <SignUp></SignUp>,
       },
-
-      // {
-      //   path: "alltoys",
-      //   element: <AllToys></AllToys>,
-      // },
-      // {
-      //   path: "mytoys",
-      //   element: (
-      //     <PrivateRoute>
-      //       <MyToys></MyToys>
-      //     </PrivateRoute>
-      //   ),
-      // },
-      // {
-      //   path: "blog",
-      //   element: <Blog></Blog>,
-      // },
-      // {
-      //   path: "toys/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <Details></Details>
-      //     </PrivateRoute>
-      //   ),
-      //   loader: ({ params }) => fetch(`${api.apiLink}/toys/${params.id}`),
-      // },
-      // {
-      //   path: "editToys/:id",
-      //   element: (
-      //     <PrivateRoute>
-      //       <EditToy></EditToy>
-      //     </PrivateRoute>
-      //   ),
-      //   loader: ({ params }) => fetch(`${api.apiLink}/toys/${params.id}`),
-      // },
     ],
   },
 ]);

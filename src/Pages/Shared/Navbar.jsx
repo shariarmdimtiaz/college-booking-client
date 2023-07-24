@@ -4,6 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 import classNames from "classnames";
 import icon from "../../assets/logo.png";
 import { ThemeContext } from "../../Providers/ThemeProvider";
+import { SearchContext } from "../../Providers/SearchProvider";
+import useCollege from "../../Hooks/useCollege";
 
 
 const Navbar = () => {
@@ -11,10 +13,16 @@ const Navbar = () => {
   const { handleToggle, containerStyles } = useContext(ThemeContext);
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { searchText, setSearchText } = useContext(SearchContext);
+  const [CollegeInfo, refetch, dataLoading] = useCollege();
 
   const isActive = (path) => {
     return location.pathname === path;
   };
+
+  const handleSearch = () =>{
+    refetch();
+  }
 
   const handleLogOut = () => {
     logOut()
@@ -121,6 +129,17 @@ const Navbar = () => {
                 type="checkbox"
                 className="toggle mx-2"
               />
+            </div>
+            {/* <div className="form-control px-2">
+              <input type="text" placeholder="Search" className="input input-bordered w-24 md:w-auto" />
+            </div> */}
+            <div className="form-control px-2">
+              <div className="input-group">
+                <input type="text" onChange={(e) => setSearchText(e.target.value)} name="searchText"  placeholder="Search…" className="input input-bordered" />
+                <button onClick={handleSearch} className="btn btn-square">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
             </div>
             {!user ? (
               <>
