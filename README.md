@@ -1,8 +1,7 @@
 # [College Booking](https://college-booking-299bb.web.app/)
 
 Description: College booking is a comprehensive educational platform with various user-specific dashboards: Home, College, Admission, Dashboard, all integrated with a robust Registration & Login System using Firebase.
-
-- For students, the platform provides a college information. Students can explore and know about different college information using this platform. After selecting a college, students can proceed with the enrollment process. Additionally, a student can give feedback about college.
+For students, the platform provides a college information. Students can explore and know about different college information using this platform. After selecting a college, students can proceed with the enrollment process. Additionally, a student can give feedback about college.
 
 ## Resource
 
@@ -13,11 +12,11 @@ Description: College booking is a comprehensive educational platform with variou
 
 ## Live website
 
-- Hosted in Firebase (Live) -> https://language-school-a1223.web.app/
+- Hosted in Firebase (Live) -> https://college-booking-299bb.web.app/
 
 ## Live Link (Data)
 
-- For all data =>
+- For all data => college-booking-server-azure.vercel.app
 
 ## React Router Dom v6.4
 
