@@ -56,7 +56,7 @@ const Navbar = () => {
           <div className="sm:hidden">
             <button
               type="button"
-              className="block text-black hover:text-gray-500 focus:text-gray-500 focus:outline-none"
+              className="block text-red-700 hover:text-red-500 focus:text-red-500 focus:outline-none"
               onClick={toggleNavbar}
             >
               <svg className="h-6 w-6 fill-current" viewBox="0 0 24 24">
@@ -231,6 +231,14 @@ const Navbar = () => {
                 type="checkbox"
                 className="toggle mx-2 block"
               />
+              <div className="form-control py-2">
+              <div className="input-group">
+                <input type="text" onChange={(e) => setSearchText(e.target.value)} name="searchText"  placeholder="Search…" className="input input-bordered" />
+                <button onClick={handleSearch} className="btn btn-square">
+                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </button>
+              </div>
+            </div>
               {!user ? (
                 <Link to="/login" className="">
                   <button className="btn btn-primary ms-2 mt-2 border-red-700 px-5 bg-white text-black hover:text-white  hover:bg-red-700 hover:border-red-700">

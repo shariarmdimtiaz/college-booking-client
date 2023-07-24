@@ -1,10 +1,15 @@
+import { useContext } from "react";
+import { ThemeContext } from "../../../Providers/ThemeProvider";
 
-const GalleryCard = ({college}) => {
-    const {groupImg} = college;
+const GalleryCard = ({ college }) => {
+    const { groupImg } = college;
+    const { containerStyles } = useContext(ThemeContext);
 
     return (
-        <div className="carousel-item h-full border-2 border-red-500 rounded-xl">
-            <img className="rounded-xl" src={groupImg} />
+        <div style={containerStyles}>
+            <div className="carousel-item h-full border-2 border-red-500 rounded-xl">
+                <img className="rounded-xl" src={groupImg} />
+            </div>
         </div>
     );
 };

@@ -19,7 +19,7 @@ const College = () => {
                 <h2 className="font-bold text-5xl text-center pt-[50px]">
                     All College
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-[50px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-[50px]">
                     {CollegeInfo.map((college) => (
                         <CollegeCard key={college._id} college={college}></CollegeCard>
                     ))}

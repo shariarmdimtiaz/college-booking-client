@@ -12,14 +12,14 @@ const PopularCollege = () => {
     return (
         <div style={containerStyles}>
             <div data-aos="fade-left" className="container mx-auto">
-                <h2 className="font-bold text-5xl text-center pt-[50px]">
+                <h2 className="font-bold text-5xl text-center pt-[120px]">
                     College
                 </h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-[50px]">
-                    {CollegeData.map((college) => (
-                        <Card key={college._id} college={college}></Card>
-                    ))}
-                </div>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 py-[50px]">
+                        {CollegeData.map((college) => (
+                            <Card key={college._id} college={college}></Card>
+                        ))}
+                    </div>
             </div>
         </div>
     );

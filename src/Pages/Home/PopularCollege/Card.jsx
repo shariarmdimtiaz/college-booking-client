@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const Card = ({ college }) => {
     return (
-        <div>
+        <div className='mx-auto'>
             <div className="card w-96 border border-red-700 shadow-xl">
                 <figure>
                     <img src={college.imageUrl} alt="Image" />

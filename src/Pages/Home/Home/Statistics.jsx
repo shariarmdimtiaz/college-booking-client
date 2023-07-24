@@ -1,18 +1,26 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AiFillSafetyCertificate } from "react-icons/ai";
 import { BsPersonHeart } from "react-icons/bs";
 import { FaFileVideo } from "react-icons/fa";
 import { GrCertificate } from "react-icons/gr";
 import { ThemeContext } from "../../../Providers/ThemeProvider";
+import AOS from "aos";
 
 const Statistics = () => {
   const { containerStyles } = useContext(ThemeContext);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+    AOS.refresh();
+  }, []);
   return (
     <div style={containerStyles}>
-      <div className="container mx-auto py-28">
-      <h1 className="font-bold text-5xl text-center pt-[50px]">
+      <div data-aos="flip-left" className="container mx-auto py-28">
+        <h1 className="font-bold text-5xl text-center pt-[50px]">
           Facts & Figures
-      </h1>
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-4 pt-[40px] gap-4">
           <div className="text-center p-7">
             <div className="flex justify-center items-center">
